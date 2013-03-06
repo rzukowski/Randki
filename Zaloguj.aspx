@@ -35,15 +35,8 @@
 
     <div id="Logo">
     <form id="form1" runat="server">
-       <span class="log">ktoszuka-tenznajdzie.pl</span><div class="men"><asp:Menu ID="MenuGlowne" runat="server" DataSourceID="MapaSerwisu" Orientation="Horizontal" CssClass="men" EnableTheming="True">
-            <DynamicHoverStyle CssClass="ZaznaczonyElementMenu" />
-            <DynamicMenuItemStyle CssClass="ElementMenuRozwijanego" />
-            <StaticHoverStyle CssClass="ZaznaczonyElementMenu" />
-            <StaticMenuItemStyle CssClass="ElementMenuNadrzednego" />
-        </asp:Menu></div></div>
+       <span class="log">ktoszuka-tenznajdzie.pl</span><div class="men"></div></div>
       
-            <asp:SiteMapDataSource ID="MapaSerwisu" runat="server" ShowStartingNode="False" />
-       
         <div style="width:307px; margin-left:auto; margin-right:auto">
         <asp:Login ID="Login2" runat="server" onloggedin="Login2_LoggedIn" FailureText="Logowanie nie powiodlo sie" LoginButtonText="Zaloguj się" PasswordLabelText="Hasło:" PasswordRequiredErrorMessage="Wprowadź hasło" RememberMeText="Zapamiętaj mnie" UserNameLabelText="Nazwa użytkownika:" UserNameRequiredErrorMessage="Nazwa jest wymagana" BackColor="#99FF99" BorderColor="#CCCC99" BorderStyle="Double" BorderWidth="1px" Font-Names="Verdana" Font-Size="12pt" TitleText="Logowanie" CssClass="logowanie" BorderPadding="3" Font-Bold="True" Font-Overline="False" ForeColor="White" Height="129pt" TextLayout="TextOnTop" Width="300px">
             <LayoutTemplate>

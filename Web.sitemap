@@ -7,7 +7,6 @@
      </siteMapNode>
      <siteMapNode title="| Hasło"  description="" >
       <siteMapNode title="Zmiana hasła" url="zmienhaslo.aspx" description="Zmień swoje hasło" />
-      <siteMapNode title="Przywracanie hasła" url="odzyskajhaslo.aspx" description="Przypomnienie hasła" />
      </siteMapNode>
     <siteMapNode title="| Wyszukiwanie"  description="" >
       <siteMapNode title="Wyszukiwanie profili" url="szukajprzyjaciol.aspx" description="Zmień swoje hasło" />

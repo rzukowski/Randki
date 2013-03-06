@@ -23,7 +23,7 @@
           <ItemTemplate>
             <td id="prof">
                 <h4>
-                  <%# Eval("fullname") %></h4>
+                  <%# Eval("username") %></h4>
                  <img src='photos/<%# Eval("username") %>image.jpg' alt="" width="100px" height="100px" />  <br />
               <a href='showprofile.aspx?userid=<%# Eval("userid") %>&<%# Eval("username") %>'>Pokaż profil</a>
                 <br />

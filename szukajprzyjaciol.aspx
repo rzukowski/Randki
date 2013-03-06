@@ -2,6 +2,8 @@
 
 <%@ Register assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.WebControls" tagprefix="asp" %>
 
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h2>Szukaj</h2>
     <p>&nbsp;<p>Wiek od :&nbsp;&nbsp;&nbsp;&nbsp;
@@ -48,6 +50,38 @@
         <asp:ListItem>55</asp:ListItem>
         <asp:ListItem>56</asp:ListItem>
         <asp:ListItem>57</asp:ListItem>
+        <asp:ListItem>58</asp:ListItem>
+        <asp:ListItem>59</asp:ListItem>
+        <asp:ListItem>60</asp:ListItem>
+        <asp:ListItem>61</asp:ListItem>
+        <asp:ListItem>62</asp:ListItem>
+        <asp:ListItem>63</asp:ListItem>
+        <asp:ListItem>64</asp:ListItem>
+        <asp:ListItem>65</asp:ListItem>
+        <asp:ListItem>66</asp:ListItem>
+        <asp:ListItem>67</asp:ListItem>
+        <asp:ListItem>68</asp:ListItem>
+        <asp:ListItem>69</asp:ListItem>
+        <asp:ListItem>70</asp:ListItem>
+        <asp:ListItem>71</asp:ListItem>
+        <asp:ListItem>72</asp:ListItem>
+        <asp:ListItem>73</asp:ListItem>
+        <asp:ListItem>74</asp:ListItem>
+        <asp:ListItem>75</asp:ListItem>
+        <asp:ListItem>76</asp:ListItem>
+        <asp:ListItem>77</asp:ListItem>
+        <asp:ListItem>78</asp:ListItem>
+        <asp:ListItem>79</asp:ListItem>
+        <asp:ListItem>80</asp:ListItem>
+        <asp:ListItem>81</asp:ListItem>
+        <asp:ListItem>82</asp:ListItem>
+        <asp:ListItem>83</asp:ListItem>
+        <asp:ListItem>84</asp:ListItem>
+        <asp:ListItem>85</asp:ListItem>
+        <asp:ListItem>86</asp:ListItem>
+        <asp:ListItem>87</asp:ListItem>
+        <asp:ListItem>88</asp:ListItem>
+        <asp:ListItem>89</asp:ListItem>
     </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp; do&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:DropDownList ID="DropDownList3" runat="server">
@@ -93,6 +127,38 @@
         <asp:ListItem>55</asp:ListItem>
         <asp:ListItem>56</asp:ListItem>
         <asp:ListItem>57</asp:ListItem>
+        <asp:ListItem>58</asp:ListItem>
+        <asp:ListItem>59</asp:ListItem>
+        <asp:ListItem>60</asp:ListItem>
+        <asp:ListItem>61</asp:ListItem>
+        <asp:ListItem>62</asp:ListItem>
+        <asp:ListItem>63</asp:ListItem>
+        <asp:ListItem>64</asp:ListItem>
+        <asp:ListItem>65</asp:ListItem>
+        <asp:ListItem>66</asp:ListItem>
+        <asp:ListItem>67</asp:ListItem>
+        <asp:ListItem>68</asp:ListItem>
+        <asp:ListItem>69</asp:ListItem>
+        <asp:ListItem>70</asp:ListItem>
+        <asp:ListItem>71</asp:ListItem>
+        <asp:ListItem>72</asp:ListItem>
+        <asp:ListItem>73</asp:ListItem>
+        <asp:ListItem>74</asp:ListItem>
+        <asp:ListItem>75</asp:ListItem>
+        <asp:ListItem>76</asp:ListItem>
+        <asp:ListItem>77</asp:ListItem>
+        <asp:ListItem>78</asp:ListItem>
+        <asp:ListItem>79</asp:ListItem>
+        <asp:ListItem>80</asp:ListItem>
+        <asp:ListItem>81</asp:ListItem>
+        <asp:ListItem>82</asp:ListItem>
+        <asp:ListItem>83</asp:ListItem>
+        <asp:ListItem>84</asp:ListItem>
+        <asp:ListItem>85</asp:ListItem>
+        <asp:ListItem>86</asp:ListItem>
+        <asp:ListItem>87</asp:ListItem>
+        <asp:ListItem>88</asp:ListItem>
+        <asp:ListItem>89</asp:ListItem>
     </asp:DropDownList>
 &nbsp;</p>
     <p>Płeć:
@@ -120,10 +186,11 @@
           <ItemTemplate>
           <td>
              <table>
-                <tr>
+                <tr><h3> <%# Eval("username") %></h3></tr>
+                 <tr>
                   <td> <img src='photos/<%# Eval("username") %>image.jpg'  alt="No Photo"  width="100px" height="100px" /></td>
                   <td> 
-                     <h3> <%# Eval("fullname") %></h3>
+                     
                      <a href='showprofile.aspx?userid=<%# Eval("userid") %>&username=<%# Eval("username") %>'>Pokaż profil</a> <br />
                      <a href='addfriend.aspx?userid=<%# Eval("userid") %>&username=<%# Eval("username") %>'> Dodaj do ulubionych</a> <br />
                        <a href='wyslijwiadomosc.aspx?userid=<%# Eval("userid") %>'> Wyslij wiadomość</a>
@@ -144,6 +211,7 @@
                     Type="String" />
                 <asp:ControlParameter ControlID="DropDownList3" Name="dateUp" PropertyName="Text" 
                     Type="String" />
+                <asp:SessionParameter Name="userid" SessionField="userid" Type="String" />
             </SelectParameters>
         </asp:SqlDataSource>
     </p>

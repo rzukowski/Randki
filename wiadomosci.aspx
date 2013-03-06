@@ -17,7 +17,7 @@
           <img src='photos/<%# Eval("username") %>image.jpg' alt="No Photo" width="100px" height="100px" />
           </td>
           <td>
-          Wiadomość od: <span class="wiadod"><%# Eval("username") %></span>   [<%# Eval("sentdate") %>]
+          Wiadomość od: <span class="wiadod"> <a href='showprofile.aspx?userid=<%# Eval("userid") %>&username=<%# Eval("username") %>'><%# Eval("username") %></a></span>   [<%# Eval("sentdate") %>]
           <pre><%# Eval("mssg") %></pre>
           <a href='wyslijwiadomosc.aspx?userid=<%# Eval("userid")%>'>Odpowiedz</a> 
           &nbsp;
@@ -27,6 +27,7 @@
           </table>
         </ItemTemplate>
     </asp:DataList>
+    <p align="center"> <a href="javascript: history.go(-1)">Powrót</a></p>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:FriendsConnectionString %>" 
         SelectCommand="PobierzWiadomosc" SelectCommandType="StoredProcedure">

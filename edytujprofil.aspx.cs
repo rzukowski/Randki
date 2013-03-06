@@ -15,7 +15,7 @@ public partial class edytujprofil : System.Web.UI.Page
     }
     protected void ProcessUpload(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
     {
-        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "size", "top.$get(\"" + uploadResult.ClientID + "\").innerHTML = 'Uploaded size: " + AsyncFileUpload1.FileBytes.Length.ToString() + "';", true);
+        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "size", "top.$get(\"" + uploadResult.ClientID + "\").innerHTML = 'Uploaded size: " + AsyncFileUpload1.FileBytes.Length.ToString() + "';", true);
         string fileName = Server.MapPath("./") + "photos\\" + Session["username"] + "image.jpg";
         AsyncFileUpload1.FileName.ToString();
         AsyncFileUpload1.SaveAs(fileName);
@@ -30,4 +30,8 @@ public partial class edytujprofil : System.Web.UI.Page
 
     }
 
+    protected void DetailsView1_PageIndexChanging(object sender, System.Web.UI.WebControls.DetailsViewPageEventArgs e)
+    {
+
+    }
 }

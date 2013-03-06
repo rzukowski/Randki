@@ -16,5 +16,6 @@
     <p>
         <asp:Label ID="lbl" runat="server"></asp:Label>
     </p>
+    <p align="center"> <a href="javascript: history.go(-1)">Powrót</a></p>
 </asp:Content>
 

@@ -12,9 +12,9 @@
         <span class="log">ktoszuka-tenznajdzie.pl</span></div>
     <form id="form1" runat="server">
     <div style="width:348px; margin-left:auto; margin-right:auto; margin-top:10px">
-        <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" AnswerLabelText="Odpowiedź:" AnswerRequiredErrorMessage="Odpowiedź jest wymagana." GeneralFailureText="Niepowodzenie. Spróbuj podobnie." QuestionInstructionText="" QuestionLabelText="Pytanie:" SubmitButtonText="Wyślij" SuccessText="Hasło zostało wysłane." UserNameFailureText="Proszę spróbować ponownie." UserNameInstructionText="Podaj nazwę użytkownika aby odzyskać hasło." UserNameLabelText="Nazwa użytkownika:" UserNameRequiredErrorMessage="Nazwa użytkownika jest wymagana." UserNameTitleText="Zapomniałeś hasła?" BackColor="#99FF99" BorderColor="#CCCC99" Font-Bold="True" ForeColor="White" Height="130px" Width="345px" BorderWidth="1px"></asp:PasswordRecovery>
+        <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" AnswerLabelText="Odpowiedź:" AnswerRequiredErrorMessage="Odpowiedź jest wymagana." GeneralFailureText="Niepowodzenie. Spróbuj podobnie." QuestionInstructionText="" QuestionLabelText="Pytanie:" SubmitButtonText="Wyślij" SuccessText="Hasło zostało wysłane." UserNameFailureText="Proszę spróbować ponownie." UserNameInstructionText="Podaj nazwę użytkownika aby odzyskać hasło." UserNameLabelText="Nazwa użytkownika:" UserNameRequiredErrorMessage="Nazwa użytkownika jest wymagana." UserNameTitleText="Zapomniałeś hasła?" BackColor="#99FF99" BorderColor="#CCCC99" Font-Bold="True" ForeColor="White" Height="130px" Width="345px" BorderWidth="1px" QuestionFailureText="Zła odpowiedź" QuestionTitleText="Potwierdzenie tożsamości"></asp:PasswordRecovery>
     </div>
     </form>
-    <p align="center"> <a href="javascript: history.go(-1)">Powrót</a></p>
+    <p align="center"> <a href="Zaloguj.aspx">Powrót</a></p>
 </body>
 </html>

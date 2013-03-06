@@ -97,7 +97,23 @@
                         </table>
                     </ContentTemplate>
                 </asp:CreateUserWizardStep>
-                <asp:CompleteWizardStep runat="server" />
+                <asp:CompleteWizardStep runat="server" >
+                    <ContentTemplate>
+                        <table style="color:White;background-color:#99FF99;font-size:100%;font-weight:bold;text-decoration:none;">
+                            <tr>
+                                <td align="center" colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Twoje konto zostało utworzone.</td>
+                            </tr>
+                            <tr>
+                                <td align="right" colspan="2">
+                                    <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Kontynuuj" ValidationGroup="CreateUserWizard1" />
+                                </td>
+                            </tr>
+                        </table>
+                    </ContentTemplate>
+                </asp:CompleteWizardStep>
             </WizardSteps>
         </asp:CreateUserWizard> </div>
     </form>

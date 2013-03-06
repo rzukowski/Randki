@@ -9,10 +9,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h2 class="ulubieni">Edytuj profil</h2>
 <p align="center">
+     <div style="border-width: 0px; width:418px; margin-left:auto; margin-right:auto; height: 277px;">
     <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
         DataKeyNames="userid" DataSourceID="SqlDataSource1" DefaultMode="Edit" 
-        Height="179px" Width="307px" style="margin-right: 82px" BorderColor="#66FF66" CellPadding="2" CellSpacing="3" CaptionAlign="Bottom" >
-        <AlternatingRowStyle BackColor="#FFFFCC" />
+        Height="179px" Width="415px" style="margin-right: 82px; margin-left: 0px;" OnPageIndexChanging="DetailsView1_PageIndexChanging" BorderStyle="None" GridLines="None" >
         <CommandRowStyle Height="50px" />
         <EmptyDataRowStyle HorizontalAlign="Left" />
         <Fields>
@@ -24,10 +24,10 @@
 <ControlStyle Height="50px" Width="300px"></ControlStyle>
             </asp:BoundField>
 
-            <asp:TemplateField HeaderText="Data Urodzin">
+            <asp:TemplateField HeaderText="Data Urodzin" ControlStyle-Width="100px">
                 <EditItemTemplate>
                     <asp:TextBox ID="TextBox1" runat="server" Text='<%#  Bind("birthdate") %>' Height="22px" Width="300px"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Format daty urodzin: yyyy-MM-dd (np. 1977-12-20)" ValidationExpression="^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$" Display="Dynamic" Font-Size="13px"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Format daty urodzin: yyyy-MM-dd (np. 1977-12-20)" ValidationExpression="^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$" Display="Dynamic" Font-Size="13px" Font-Underline="False"></asp:RegularExpressionValidator>
                 </EditItemTemplate>
                 <InsertItemTemplate>
                     <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("birthdate") %>'></asp:TextBox>
@@ -35,6 +35,8 @@
                 <ItemTemplate>
                     <asp:Label ID="Label2" runat="server" Text='<%# Bind("birthdate") %>'></asp:Label>
                 </ItemTemplate>
+
+<ControlStyle Width="100px"></ControlStyle>
             </asp:TemplateField>
 
             <asp:TemplateField HeaderText="Płeć">
@@ -50,14 +52,14 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowEditButton="True" CancelText="Anuluj" DeleteText="Usuń" EditText="Edytuj" UpdateText="Zmień" CausesValidation="False" HeaderStyle-VerticalAlign="Middle" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center" FooterStyle-HorizontalAlign="Center" />
             
         </Fields>
-        <PagerStyle BackColor="#660066" />
         <RowStyle Height="60px" HorizontalAlign="Left" VerticalAlign="Top" />
     </asp:DetailsView>
 </p>
-<p>
+    </div>
+<p style="height: 22px; width: 432px">
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:FriendsConnectionString %>" SelectCommand="SELECT DISTINCT [plec] FROM [user_profile]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:FriendsConnectionString %>" 
@@ -104,8 +106,8 @@ Wybierz plik :
             runat="server"  
             >  
         </asp:ScriptManager>  
-    <cc1:asyncfileupload ID="AsyncFileUpload1" runat="server" UploadingBackColor="Yellow" OnClientUploadComplete="uploadComplete"
-            OnUploadedComplete="ProcessUpload" ThrobberID="spanUploading" />
+    <cc1:asyncfileupload ID="AsyncFileUpload1" runat="server" OnClientUploadComplete="uploadComplete"
+            OnUploadedComplete="ProcessUpload" ErrorBackColor="White" UploaderStyle="Modern" ViewStateMode="Disabled" CompleteBackColor="White" Height="33px" />
     <asp:Label ID="lblMsg" runat="server"></asp:Label>
    <asp:Label runat="server" Text=" " ID="uploadResult" />
 
